@@ -40,15 +40,3 @@ RSpec.describe StoreAdminController, type: :controller do
     end
   end
 end
-
-  describe "GET invoice" do
-    it "renders the invoice template without any layout" do
-      visit 'admin/invoice'
-
-      expect(response).to render_template("invoice")
-      assert_template layout: false
-
-      expect(page.find("h1").text).to eq("Your Invoice")
-    end
-  end
-end
